@@ -33,7 +33,7 @@
                     <li><a href="{{url_for('insert_recipe')}}">Recipes</a></li>
                     <li><a href="{{url_for('search')}}">Search</a></li>
                  {% if session['username'] %}   
-                 
+                    <li><a href="{{url_for('loggedin', username=session['username'])}}">Result</a></li>
                     <li><a href="{{url_for('add_recipe')}}"> Add Recipe</a></li>
                     <li><a href="{{url_for('categories')}}"> Manage Category</a></li>
                     <li><a href="{{url_for('logout')}}">Logout</a></li>
