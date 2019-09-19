@@ -21,7 +21,13 @@ users_collection = mongo.db.users
 recipes_collection = mongo.db.recipes
 categories_collection = mongo.db.categories
 
-
+@app.route('/search')
+def search():
+    search_query = request.args['search_query']
+    results = mongo.db.recipes.find({'recipe_title': search_query})
+    return render_template('search.html',
+                               results=results, 
+                               search_query=search_query)
 
 @app.route('/', methods=['POST', 'GET'])
 def index():

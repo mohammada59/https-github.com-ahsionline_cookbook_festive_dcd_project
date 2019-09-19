@@ -1,0 +1,18 @@
+{% extends 'base.html'%}{% block content %}
+<main class="center-align container">
+
+<!--Page Title-->
+    <h2 class="page-title">Welcome to Your Festive Cookbook search page </h2><hr>
+    <div class="main">
+       
+        <div class="section">
+                <form method="GET" action="{{ url_for('search') }}>
+                   <input type="text" name="search_recipe" placeholder="Search...">
+                   <button type="submit">Submit</button>
+                </form>
+        </div>
+     
+  
+</main>
+
+{% endblock %}
