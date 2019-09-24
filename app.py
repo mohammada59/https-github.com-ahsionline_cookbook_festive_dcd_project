@@ -48,17 +48,19 @@ def index():
                                pages=pages)
 
 
-
-@app.route('/search')
+@app.route('/search', methods=['POST'])
 def search():
     """Route for full text search bar"""
-    
-    
+
     db_query = request.form.get('db_query')
-    results = mongo.db.recipes.find({'$text': {'$search': db_query}})
-    categories = list(categories_collection.find())
-    return render_template('recipe.html',  recipes=results, categories=categories)
-    
+    recipes = list(mongo.db.recipes.find({"name": {"$regex": f'.*{db_query}.*'}}))
+    return render_template('result.html', recipes=recipes)
+
+
+
+
+
+
 @app.route('/<category_name>', methods=['GET'])
 def filter_list (category_name):
     categories = list(categories_collection.find())
@@ -125,7 +127,7 @@ Recipe Create/Update/Delete Methods
 @app.route('/recipe/<recipe_id>', methods=['GET', 'POST'])
 def recipe_page(recipe_id):
     """Route to show single recipe view page"""
-    recipe = recipes_collection.find_one({"_id": ObjectId(recipe_id).limit(6)})
+    recipe = recipes_collection.find_one({"_id": ObjectId(recipe_id)})
     return render_template('recipe.html', recipe=recipe)
     
 

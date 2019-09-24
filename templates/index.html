@@ -5,7 +5,7 @@
     <h2 class="page-title">Welcome to Your Festive Cookbook </h2><hr>
     <div class="main">
     <div class="col s12 m12">
-        <form action="{{ url_for('search') }}" class="search-form">
+        <form action="{{ url_for('search') }}" method="POST" class="search-form">
             <div class="input-field col s12">
                 <i class="material-icons prefix">youtube_searched_for</i>
                 <input type="text" id="db_query" name="db_query" placeholder="Search">
