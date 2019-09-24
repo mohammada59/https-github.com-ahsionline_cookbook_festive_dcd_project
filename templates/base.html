@@ -5,11 +5,11 @@
            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
            <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
            <link rel="icon" type="image/png" href="../../static/img/favicon.ico">
-           <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
           
     </head>
-    <body style="background:url(static/img/dinner-egg-flatlay-54455.jpg);background-size:100%  100%;">
-          <header>
+    <body>
+    <header>
          <nav>
             <div class="nav-wrapper">
                 <a href="{{url_for('index')}}" class="brand-logo">Online cookbook</a>
@@ -17,7 +17,8 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                      <li><a href="{{url_for('index')}}">Home</a></li>
                     <li><a href="{{url_for('insert_recipe')}}">Recipe</a></li>
-                     <li><a href="{{url_for('search')}}">Search</a></li>
+                    <li><a href="{{url_for('store')}}">Store</a></i>
+                    
                  {% if session['username'] %}  
                      <li><a href="{{url_for('loggedin', username=session['username'])}}">Result</a></li>
                     <li><a href="{{url_for('add_recipe')}}"> Add Recipe</a></li>
@@ -31,7 +32,7 @@
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{{url_for('index')}}">Home</a></li>
                     <li><a href="{{url_for('insert_recipe')}}">Recipes</a></li>
-                    <li><a href="{{url_for('search')}}">Search</a></li>
+        
                  {% if session['username'] %}   
                     <li><a href="{{url_for('loggedin', username=session['username'])}}">Result</a></li>
                     <li><a href="{{url_for('add_recipe')}}"> Add Recipe</a></li>
@@ -46,10 +47,8 @@
             </div>
         </nav>
           {% block content %}{% endblock %}
- </header>
+     </header>
      
-
-        
       
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

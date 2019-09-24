@@ -3,8 +3,8 @@
 /************************************GENERIC*/
 
 body {
-    background-color: #cddbc7;
-    font-family: 'PT Serif', serif;
+    background-color:  #ffcc00;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -297,8 +297,33 @@ input::placeholder {
     min-width: 90%;
 }
 
+.pagination {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  font-family: 'Margarine', cursive; }
 
+.pagination li.active {
+  background-color: #2e62af; }
 
+.filter-btn {
+  background-color: transparent;
+  width: 100%;
+  border-radius: 2px;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: black;
+  outline: none;
+  border: 2px solid #f26226;
+  text-decoration: none;
+  line-height: 1;
+  font-family: 'Margarine', cursive; }
+
+.filter-btn:hover {
+  background-color: #f26226;
+  color: #fff; }
 
 
 
@@ -306,8 +331,3 @@ input::placeholder {
 
 
 /************************************CARDS*/
-
-#SearchNavBar, #SearchItemsContainer
-{
-    display: none;
-}

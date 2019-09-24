@@ -4,12 +4,13 @@ from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 from flask import request
 from flask_bcrypt import bcrypt
-
+import math
+ 
 app = Flask(__name__)
 app.secret_key=os.urandom(24)
 
 
-app.config["MONGO_DBNAME"] = 'online_cookbook'
+app.config["MONGO_DBNAME"] = 'online_cookbookt'
 app.config["MONGO_URI"] = "mongodb+srv://root:root123456@myfirstcluster-jkztf.mongodb.net/online_cookbookt?retryWrites=true&w=majority"
 
 
@@ -21,22 +22,42 @@ users_collection = mongo.db.users
 recipes_collection = mongo.db.recipes
 categories_collection = mongo.db.categories
 
+@app.route('/')
+def index():
+    """
+    Route allows users to view all the recipes within the database
+    collection with pagination, logged in users can view profile and create
+    recipes.
+    """
+    page_limit = 6  # Logic for pagination
+    current_page = int(request.args.get('current_page', 1))
+    total = mongo.db.recipe.count()
+    pages = range(1, int(math.ceil(total / page_limit)) + 1)
+    recipes = mongo.db.recipe.find().sort('_id', pymongo.ASCENDING).skip(
+        (current_page - 1)*page_limit).limit(page_limit)
+
+    if 'logged_in' in session:
+        current_user = mongo.db.user.find_one({'name': session[
+            'username'].title()})
+        return render_template('index.html', recipe=recipes,
+                               title='Home', current_page=current_page,
+                               pages=pages, current_user=current_user)
+    else:
+        return render_template('index.html', recipe=recipes,
+                               title='Home', current_page=current_page,
+                               pages=pages)
+
+
+
 @app.route('/search')
 def search():
-    search_query = request.args['search_query']
-    results = mongo.db.recipes.find({'recipe_title': search_query})
-    return render_template('search.html',
-                               results=results, 
-                               search_query=search_query)
-
-@app.route('/', methods=['POST', 'GET'])
-def index():
+    """Route for full text search bar"""
+    
+    
+    db_query = request.form.get('db_query')
+    results = mongo.db.recipes.find({'$text': {'$search': db_query}})
     categories = list(categories_collection.find())
-    recipes = recipes_collection.find().sort('name', pymongo.ASCENDING)
-    return render_template('index.html',
-                           recipes=recipes,
-                           categories=categories)
-       
+    return render_template('recipe.html',  recipes=results, categories=categories)
     
 @app.route('/<category_name>', methods=['GET'])
 def filter_list (category_name):
@@ -52,7 +73,6 @@ def filter_list (category_name):
         
         
 
-       
 """
 Login/User sessions
 """
@@ -105,9 +125,10 @@ Recipe Create/Update/Delete Methods
 @app.route('/recipe/<recipe_id>', methods=['GET', 'POST'])
 def recipe_page(recipe_id):
     """Route to show single recipe view page"""
-    recipe = recipes_collection.find_one({"_id": ObjectId(recipe_id)})
+    recipe = recipes_collection.find_one({"_id": ObjectId(recipe_id).limit(6)})
     return render_template('recipe.html', recipe=recipe)
     
+
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("addrecipe.html", 
@@ -199,6 +220,10 @@ def update_category(category_id):
         {'category_name': request.form['category_name']})
     return redirect(url_for('categories'))
     
+
+@app.route('/store')
+def store():
+    return render_template('store.html')
 
 
 

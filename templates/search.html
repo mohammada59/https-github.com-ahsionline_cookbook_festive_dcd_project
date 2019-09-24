@@ -1,18 +1,49 @@
-{% extends 'base.html'%}{% block content %}
-<main class="center-align container">
-
+{% extends 'base.html'%}{% block content %} 
 <!--Page Title-->
-    <h2 class="page-title">Welcome to Your Festive Cookbook search page </h2><hr>
+   <center> <h2 class="page-title">Welcome to Your Festive Cookbook </h2></center>
     <div class="main">
-       
-        <div class="section">
-                <form method="GET" action="{{ url_for('search') }}>
-                   <input type="text" name="search_recipe" placeholder="Search...">
-                   <button type="submit">Submit</button>
-                </form>
-        </div>
-     
-  
-</main>
+      <div class="row tp-search">
+    <div class="col hide-item-medium l3">
+        <span class="v-align site-logo"><i class="small material-icons nav-icon">local_dining</i>Cookbook</span>
+    </div>
+    <div class="col s12 m12">
+        <form action="{{ url_for('search') }}" methods="POST" class="search-form">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">youtube_searched_for</i>
+                <input type="text" id="db_query" name="db_query" placeholder="Search">
+                <button class="btn waves-effect waves-light search-btn" type="submit">GO<i class="material-icons right">send</i></button>
+            </div>
+        </form>
+    </div>
+</div> 
+ <div class="col m9">
+        {% for r in results %}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ r['recipe_image'] }}">
+                </div>
+                <div class="card-title">
+                    <span>{{r. recipe_name }}</span>
+                </div>
+                <div class="card-action">
+                    <a href="{{ url_for('insert_recipe', recipe_id=r._id) }}">View Reicpe</a>
+                </div>
+            </div>
 
+        </div>
+         {% endfor %}
+
+        <ul class="pagination">
+              {% for page_number in pages %} {% if page_number == current_page %}
+            <li class="active"><a>{{ page_number }}</a></li>
+            {% else %}
+            <li class="waves-effect"><a href="{{ url_for('search', current_page=page_number, db_query=db_query) }}">{{ page_number }}</a></li>
+            {% endif %} {% endfor %}
+        </ul>
+
+        <!-- end of col-9 -->
+    </div>
+    <!-- end of row -->
+    </main>
 {% endblock %}

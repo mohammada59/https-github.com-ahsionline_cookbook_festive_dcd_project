@@ -6,6 +6,7 @@ The app is a recipe Festival that will store all your Festive and occasional rec
 to read recipe, create new recipe, edit and delete them (CRUD).
 As a user you can:
 
+## User story
 * view the app on your preferred device (mobile, tablet, desktop)
 * create your own recipe and add to the website
 * edit the recipes
@@ -30,29 +31,52 @@ your username your email and password then you will enter the Result of data pag
 also add recipes and manage, add , update and delete categories
 
 ## WIREFRAMES
-
+User story of online festive cookbook step by step explain with Demo
 ### wireframes for mobile
+user freidly Responsive Application Desktop and Mobile user can see the Mobile version (Responsive)
 ![Home-Mobile](https://user-images.githubusercontent.com/38302279/65285854-98834480-db35-11e9-9354-ede11e979123.png)
-
+user can use the app in Desktop show the view of Desktop
 ### wireframes for desktop
-![Home-Desktop](https://user-images.githubusercontent.com/38302279/65285852-98834480-db35-11e9-89ca-5a54c4a04776.png)
+![Home-Desktop](https://user-images.githubusercontent.com/38302279/65380517-bdfa8480-dcd4-11e9-8a13-899aab5d7d09.png)
 ### wireframes for Recipes
-![Recipe](https://user-images.githubusercontent.com/38302279/65285861-a1741600-db35-11e9-88a6-41f324d84249.png)
+user open the app and user can see all Recipes when user click the Recipes page it will be redirect to Recipe card 
+where user can see the Name and image of Recipe and view button when user click view button to show the full
+recipe page recipe name,image,category,cooking_time,prep_time also Recipe ingredients and Method and last cusines
+and name of the Author mean user of Recipe who add the Recipe
+![Recipe](https://user-images.githubusercontent.com/38302279/65380519-c357cf00-dcd4-11e9-9867-626774551bf8.png)
+![Recipe_id](https://user-images.githubusercontent.com/38302279/65380828-f05bb000-dcdb-11e9-9bd4-dd003f6330a5.png)
 ### wireframes for signup/signin
-![Singnup](https://user-images.githubusercontent.com/38302279/65286146-69b99e00-db36-11e9-99c9-806bba095fc2.png)
-![SignIn](https://user-images.githubusercontent.com/38302279/65286145-69210780-db36-11e9-827a-16cc4cc224dc.png)
+user create signup add user name and password when user signin fill the username and password to Login the page 
+![Singnup](https://user-images.githubusercontent.com/38302279/65380419-2c3e4780-dcd3-11e9-9926-f464aab972e1.png)
+![SignIn](https://user-images.githubusercontent.com/38302279/65380447-dae28800-dcd3-11e9-82d8-453b7f24935e.png)
 ### wireframes Add Recipe and after redirect the add recipe page in Result Data
-![Add-Recipe](https://user-images.githubusercontent.com/38302279/65286400-5a872000-db37-11e9-82f2-a5f080f629d8.png)
-![Result-of-Data](https://user-images.githubusercontent.com/38302279/65285876-ac2eab00-db35-11e9-8037-3b5f59ab67a8.png)
+when user Login the page user can see the Result page where he can see the latest recipe and also user can add the Recipe 
+user fill the Recipe and page Redirect to Result where user can see the recipe he Add it
+![Add-Recipe](https://user-images.githubusercontent.com/38302279/65380548-6dcff200-dcd5-11e9-8ec9-d467cf6ffad5.png)
+![Result-of-Data](https://user-images.githubusercontent.com/38302279/65380610-dc617f80-dcd6-11e9-8358-10118d158755.png)
 ### wireframes Edit Recipe and Delete Recipe
-[Edit_Recipe](https://user-images.githubusercontent.com/38302279/65285889-b6e94000-db35-11e9-96a5-0802a780294d.png)
-![delete_recipe](https://user-images.githubusercontent.com/38302279/65285900-bc468a80-db35-11e9-860f-b2d27c1fed5b.png)
+when user in Result page user can edit or delete Recipe 
+![Edit_Recipe](https://user-images.githubusercontent.com/38302279/65380552-7aece100-dcd5-11e9-90b9-1166c78877cf.png)
+if user want to edit recipe click edit button and changes made and click button save chages and page Redirect to the
+Result page where changes made.
+![Delete recipe](https://user-images.githubusercontent.com/38302279/65380598-65c48200-dcd6-11e9-954d-940ef9a8ae07.png)
+if user want to delete recipe simple click delete the button and Recipe will delete on the Result and Recipe page
 ### wireframes Manage Add edit and delete category
-![Manage-Categories](https://user-images.githubusercontent.com/38302279/65285908-bf417b00-db35-11e9-92fe-888b14e2ed38.png)
-![Add-Category](https://user-images.githubusercontent.com/38302279/65285917-c5cff280-db35-11e9-92af-f8531336fb51.png)
-![Edit-Categoery](https://user-images.githubusercontent.com/38302279/65286665-468fee00-db38-11e9-82f0-418af0781779.png)
-![Category-Delete1](https://user-images.githubusercontent.com/38302279/65285935-cec0c400-db35-11e9-95b9-830f669f7eb2.png)
-![Category-Delete2](https://user-images.githubusercontent.com/38302279/65285939-d1231e00-db35-11e9-9e04-95d39c533655.png)
+when user click manage categories user can see the all Festive category and every category is edit and delete button
+where user can choose add,edit and delete category
+![Manage-Categories](https://user-images.githubusercontent.com/38302279/65380634-4843e800-dcd7-11e9-8b9e-328124383f24.png)
+if user want to add category click add category button add the name of category example:Freindship Day then click add
+category button to add category page will redirect to the Manage Categories
+![Add-Category](https://user-images.githubusercontent.com/38302279/65380650-98bb4580-dcd7-11e9-92e0-25ca9e5bfa73.png)
+if user want edit category in Manage Category click edit button and change example:Freindship to Freindship Day and
+save change and click page Redirect to Manage category 
+![Edit-Categoery](https://user-images.githubusercontent.com/38302279/65380725-264b6500-dcd9-11e9-8e79-8e99679d3890.png)
+if user want to the delete category simple user need to click the delete category and category will delete in
+Manage Category page
+![Category-Delete1](https://user-images.githubusercontent.com/38302279/65380707-a4f3d280-dcd8-11e9-95a2-b51c93622617.png)
+![Category-Delete2](https://user-images.githubusercontent.com/38302279/65380708-a9b88680-dcd8-11e9-94b7-5032d8ffb15b.png)
+
+
 ### Database schema
 ![Database_Schema_mongo](https://user-images.githubusercontent.com/38302279/65286748-98d10f00-db38-11e9-91ff-42fdacdea7cf.png)
 ### Example schema from the 'recipes' collection:
@@ -147,6 +171,38 @@ Add alert messages to registration and login system:
 
 * when user register to the app successfully - confirmation message should pop up
 * when user login and try to use the same username which already exist - warning message should pop up
+
+### Bugs
+A number of bugs were caught during the testing process which were fixed. Some of
+these were caused by the DOM manipulation on the add recipe and edit recipe pages.
+
+There are a number of bugs that I am currently aware of that are yet to be fixed.
+* One bug is in the filter options:
+    * When changing between filter by main ingredient and cuisine all cuisines 
+      are temporarly shown before an option in these categories is selected.
+* Add Recipe/Edit Recipe
+    * There is a bug caused by the validaion process of WTForms where if an invalid
+      recipe submission is made, i.e. one field is not valid, on reload sometimes 
+      the cuisine selector options do not reload.
+* Favourite:
+    * I've intermittently experienced an error where if clicked quickly in succession
+      the favourite button might submit to the database twice. This seems to be due 
+      to some asynchronous behaviour and should be resolved with an async/await 
+      function or similar.
+
+#MONGO_URI
+Set the accompanying config vars:
+
+| Key | Value |
+ --- | ---
+DEBUG | FALSE
+IP | 90.193.93.24
+MONGO_URI | `mongodb+srv://root:<password>@myfirstcluster-np4or.mongodb.net/test?retryWrites=true&w=majority`
+
+PORT | 28017
+SECRET_KEY | `<your_secret_key>`
+
+- To retrieve your MONGO_URI please reference the official MongoDB Atlas documentation [here](https://docs.atlas.mongodb.com/)
 
 ## DEPLOYMENT
 
