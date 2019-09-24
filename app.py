@@ -57,10 +57,6 @@ def search():
     return render_template('result.html', recipes=recipes)
 
 
-
-
-
-
 @app.route('/<category_name>', methods=['GET'])
 def filter_list (category_name):
     categories = list(categories_collection.find())
