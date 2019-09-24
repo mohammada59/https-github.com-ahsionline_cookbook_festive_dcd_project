@@ -32,6 +32,9 @@ also add recipes and manage, add , update and delete categories
 
 ## WIREFRAMES
 User story of online festive cookbook step by step explain with Demo
+The Readme file will see the wireframe is different in wallpaper The app was body style of backgound
+was looking  squeshy you can see in wireframe mobile demo thats why i remove wallpaper and style.css file
+to change the color of body thats why you will see the some of wireframe is difference. 
 ### wireframes for mobile
 user freidly Responsive Application Desktop and Mobile user can see the Mobile version (Responsive)
 ![Home-Mobile](https://user-images.githubusercontent.com/38302279/65285854-98834480-db35-11e9-9354-ede11e979123.png)
@@ -84,7 +87,15 @@ if user want to the delete category simple user need to click the delete categor
 Manage Category page
 ![Category-Delete1](https://user-images.githubusercontent.com/38302279/65380707-a4f3d280-dcd8-11e9-95a2-b51c93622617.png)
 ![Category-Delete2](https://user-images.githubusercontent.com/38302279/65380708-a9b88680-dcd8-11e9-94b7-5032d8ffb15b.png)
-
+### store
+if user want to shopping he can choose and select the item and add to the cart and when user want to purchase
+click the purchase button and user received the message Thank you for purchase 
+i explain you example 
+user click the store choose pots and pans and add to cart and add remove purchase pots and pans and user received the 
+Thank you for purchase message
+![store](https://user-images.githubusercontent.com/38302279/65554817-88e37180-df22-11e9-8a3d-75ed56a91c6b.png)
+![store_cart](https://user-images.githubusercontent.com/38302279/65554822-8bde6200-df22-11e9-8e38-1ceddf691ba6.png)
+![store_purchase](https://user-images.githubusercontent.com/38302279/65554965-05765000-df23-11e9-897c-4b609fb18e02.png)
 
 ### Database schema
 ![Database_Schema_mongo](https://user-images.githubusercontent.com/38302279/65286748-98d10f00-db38-11e9-91ff-42fdacdea7cf.png)

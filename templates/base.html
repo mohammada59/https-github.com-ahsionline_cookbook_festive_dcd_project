@@ -32,7 +32,7 @@
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{{url_for('index')}}">Home</a></li>
                     <li><a href="{{url_for('insert_recipe')}}">Recipes</a></li>
-        
+                    <li><a href="{{url_for('store')}}">Store</a></i>
                  {% if session['username'] %}   
                     <li><a href="{{url_for('loggedin', username=session['username'])}}">Result</a></li>
                     <li><a href="{{url_for('add_recipe')}}"> Add Recipe</a></li>
