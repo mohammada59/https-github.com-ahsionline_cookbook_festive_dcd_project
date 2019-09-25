@@ -43,7 +43,9 @@ user can use the app in Desktop show the view of Desktop
 ![Home-Desktop](https://user-images.githubusercontent.com/38302279/65380517-bdfa8480-dcd4-11e9-8a13-899aab5d7d09.png)
 ### wireframes for Search
 if user want to serach recipes in database just search recipe for example if user want to search christmas recipes just 
-click christmas and then Go user will find all christmas recipe
+click christmas and then Go user will find all christmas recipe show on the Result page in the result page 
+user got theree options only if user search recipe edit delete and view the recipe if user click view recipe
+redirect to full recipe page but if user want to edit or delete recipe user needs to be Login the app 
 ![Search](https://user-images.githubusercontent.com/38302279/65547917-4fa30580-df12-11e9-93a7-111d75416c9b.png)
 the search of result is show like that 
 ![search_result](https://user-images.githubusercontent.com/38302279/65548777-0f448700-df14-11e9-9e62-1273e00c4df9.png)

@@ -3,6 +3,7 @@
 
 <!--Page Title-->
     <h2 class="page-title">Welcome to Your Festive Cookbook </h2><hr>
+    <h5>would you like to choose your favourit recipe search and click Go</h5>
     <div class="main">
     <div class="col s12 m12">
         <form action="{{ url_for('search') }}" method="POST" class="search-form">
@@ -30,13 +31,7 @@
         </div>
         {% endfor %}
 
-        <ul class="pagination">
-            {% for page_number in pages %} {% if page_number == current_page %}
-            <li class="active"><a>{{ page_number }}</a></li>
-            {% else %}
-            <li class="waves-effect"><a href="{{ url_for('index', current_page=page_number) }}">{{ page_number }}</a></li>
-            {% endif %} {% endfor %}
-        </ul>
+        
         <!-- end of col-9 -->
     </div>
     <!-- end of row -->
