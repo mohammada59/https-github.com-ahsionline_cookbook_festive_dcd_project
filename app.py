@@ -11,7 +11,7 @@ app.secret_key=os.urandom(24)
 
 
 app.config["MONGO_DBNAME"] = 'online_cookbookt'
-app.config["MONGO_URI"] = "mongodb+srv://root:root123456@myfirstcluster-jkztf.mongodb.net/online_cookbookt?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 
 mongo = PyMongo(app)
