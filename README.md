@@ -5,6 +5,8 @@
 I created an application called ONLINE COOKBOOK that allows user to store and easily access recipes.
 The app is a recipe Festival that will store all your Festive and occasional recipes in one place! It allow the user
 to read recipe, create new recipe, edit and delete them (CRUD).
+As def(index) i remove the pagination in  page because it was not working i got meeting with my mentor Anthoney he siad leave it
+but for get to remove in @appp.rout('/index') i forget to remove pagination in app.py in index route i applogise for mistake i hope you will consider my applogey.
 As a user you can:
 
 ## User story
