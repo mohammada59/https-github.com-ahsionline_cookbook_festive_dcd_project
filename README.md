@@ -245,7 +245,7 @@ I created a new app on Heroku dashboard, I named it 'COOK-BOOK and then I set th
 I linked Github repository to Heroku.
 I set the config vars as follows: IP 0.0.0.0 and PORT 5000.
 
-My app can be found at: http://online-festive-cookbook.herokuapp.com/
+My app can be found at: *https://online-festive-recipe-cookbook.herokuapp.com/
 
 To run this project you need to do the following:
 
