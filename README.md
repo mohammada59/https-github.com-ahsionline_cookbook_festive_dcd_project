@@ -197,21 +197,29 @@ Add alert messages to registration and login system:
 
 ### Bugs
 A number of bugs were caught during the testing process which were fixed. Some of
-these were caused by the DOM manipulation on the add recipe and edit recipe pages.
+these Login ,add recipe and Login backgoundcolor chage in login  pages.
 
 There are a number of bugs that I am currently aware of that are yet to be fixed.
-* One bug is in the filter options:
-    * When changing between filter by main ingredient and cuisine all cuisines 
-      are temporarly shown before an option in these categories is selected.
-* Add Recipe/Edit Recipe
-    * There is a bug caused by the validaion process of WTForms where if an invalid
-      recipe submission is made, i.e. one field is not valid, on reload sometimes 
-      the cuisine selector options do not reload.
-* Favourite:
-    * I've intermittently experienced an error where if clicked quickly in succession
-      the favourite button might submit to the database twice. This seems to be due 
-      to some asynchronous behaviour and should be resolved with an async/await 
-      function or similar.
+* One bug is in the Login page:
+    * During the testing process when i Login the app in responsive mobile view
+     i was getting erro to keyframe user but i try to click back and try again
+     the Login again then work i try couple of time with different device but in 
+     100 times is 1 or 2 time may be get error but i am 100% sure to fix the error.
+* Add Recipe
+    * There are error in Add recipe page in responsive view page was not open but
+     when i delete the loggedin user Result page it was working fine then i add 
+    loggedin and resatrt again it was work and know is proper working .
+* Result:
+    * I've intermittently experienced an error where if clicked the add recipe
+      button get keyframe user then i try fix and use different device but it is working 
+      know perfectly click the publish and redirect the page in Result
+* backgound color
+* during the testing procedure i get some issue when i use app color show the as it is 
+  the color i add in css but when i login the app color change i try couple of time it 
+  working fine might be sometime got problem finger cross i check again and again it was 
+  fix after update the application deploy in Heroku.
+     
+
 
 #MONGO_URI
 Set the accompanying config vars:
